@@ -22,3 +22,6 @@ dist/*
 dist/public/bundle.js
 dist/public/assets/css
 !dist/public
+
+# OS
+.DS_Store
