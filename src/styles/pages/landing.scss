@@ -1,0 +1,414 @@
+//@import '../firebit/config';
+//@import '../firebit/components/required';
+
+.landing {
+  .grid-effect {
+    height: 100%;
+    position: fixed;
+    top: 0;
+
+    .col-1 {
+      border-right: 1.2px dashed rgb(0 0 0/12%);
+
+      @include breakpoint(phone-large, 'max-width') {
+        &:nth-child(odd) {
+          border-right: 0;
+        }
+      }
+    }
+  }
+
+  .hero {
+    .copy {
+      padding-bottom: 1rem;
+      position: absolute;
+      top: 8%;
+
+      h1 {
+        margin-bottom: 1.4rem;
+      }
+
+      h5 {
+        letter-spacing: 0.15rem;
+        line-height: 1.4;
+        font-weight: 500;
+      }
+
+      > * {
+        padding-right: percentage(calc(1 / 6));
+        white-space: nowrap;
+      }
+    }
+
+    i.img {
+      width: auto;
+      height: 60vh;
+      position: relative;
+      z-index: -1;
+    }
+
+    .graphic .img {
+      //margin: 1rem;
+      background-position: right;
+    }
+
+    .cta {
+      padding-top: 18rem;
+
+      .cta-btn {
+        padding-left: 0;
+        padding-right: 0;
+
+        a {
+          font-size: inherit;
+          line-height: inherit;
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    @include breakpoint(phone-large, 'max-width') {
+      .graphic .img {
+        width: auto;
+        height: 24rem;
+        margin: 0;
+      }
+
+      .cta {
+        padding-bottom: 4rem;
+        padding-top: 3rem;
+        order: 3;
+      }
+    }
+
+    @include breakpoint(phone, 'max-width') {
+      .copy > * {
+        white-space: normal;
+      }
+
+      .graphic .img {
+        width: auto;
+        height: 20rem;
+      }
+    }
+
+    @include breakpoint(tablet-large, 'min-width') {
+      & {
+        padding: 2rem 0;
+      }
+
+      .cta {
+        padding-top: 15.5rem;
+      }
+    }
+
+    @include breakpoint(desktop-small, 'min-width') {
+      & {
+        padding: 4rem 0;
+      }
+
+      .cta {
+        padding-top: 14rem;
+      }
+    }
+
+    @include breakpoint(phone-large, 'max-width') {
+      .cta {
+        position: initial;
+      }
+    }
+  }
+
+  .projects {
+    .header {
+      height: 16rem;
+      background-color: color(neon-orange, 300);
+      position: relative;
+      z-index: -1;
+      overflow: hidden;
+
+      /*&:before {
+				content: '';
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				background-image: linear-gradient(rgba(0 0 0/10%) 20%, transparent 20%, transparent);
+				background-size: 1rem 2rem;
+				transform: scale(3) rotate(-40deg);
+			}*/
+
+      .graphic {
+        height: calc(100% - 4.4rem);
+        margin-top: 4.4rem;
+        position: relative;
+        overflow: hidden;
+
+        i {
+          height: 150%;
+          transform: scale(2) rotate(15deg) translateY(-15%);
+          position: absolute;
+          z-index: 2;
+        }
+
+        &:before {
+          content: '';
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          position: absolute;
+        }
+      }
+
+      .heading {
+        position: absolute;
+        bottom: 15%;
+        z-index: 3;
+
+        > * {
+          display: flex;
+        }
+
+        div {
+          font-size: 1.4rem;
+
+          &:nth-child(2) {
+            margin-top: 1rem;
+          }
+        }
+      }
+    }
+
+    .list {
+      margin: 5rem 0;
+    }
+
+    .project {
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+
+      a {
+        color: color(neon-blue, 300);
+      }
+
+      .project-id {
+        color: color(neon-blue, 50);
+        font-weight: 300;
+        letter-spacing: -0.1rem;
+      }
+
+      .name a,
+      .project-id {
+        display: inline;
+        font-size: map-get($headers, h4);
+        line-height: map-get($headers, h4);
+
+        & > * {
+          position: absolute;
+        }
+      }
+
+      .name a {
+        margin-bottom: 0.4rem;
+        font-weight: 900;
+        letter-spacing: -0.04rem;
+      }
+
+      .project-info {
+        margin-top: 0.4rem;
+
+        > * {
+          font-weight: 200;
+          font-style: italic;
+          line-height: 1.4;
+        }
+
+        .platform {
+          font-size: 1.15rem;
+          margin-top: 0.4rem;
+
+          .highlight {
+            font-weight: 800;
+            margin-left: 0.3rem;
+            color: color(neon-blue, 400);
+          }
+        }
+      }
+
+      .thumbnail {
+        margin-top: 1.8rem;
+        position: relative;
+        z-index: 1;
+
+        &:before {
+          content: '';
+          background-color: color(neon-blue, 300);
+          width: 100%;
+          height: 100%;
+          left: -0.6rem;
+          bottom: -0.6rem;
+          position: absolute;
+          z-index: -1;
+        }
+
+        > * {
+          background-size: cover;
+          padding-bottom: calc(100% * 9 / 16);
+          display: block;
+
+          iframe {
+            height: 100%;
+            position: absolute;
+          }
+        }
+
+        .icon {
+          padding-top: 3rem;
+          padding-right: 3rem;
+          float: right;
+        }
+      }
+
+      .nav-btn {
+        margin-top: 1.6rem;
+        text-align: center;
+
+        i {
+          cursor: pointer;
+          padding: 1rem;
+        }
+      }
+    }
+
+    @include breakpoint(phone-large, 'max-width') {
+      .header {
+        height: 14rem;
+      }
+
+      .project {
+        .name a,
+        .project-id {
+          font-size: map-get($headers, h5);
+          line-height: map-get($headers, h5);
+        }
+      }
+    }
+
+    @include breakpoint(tablet-large, 'min-width') {
+      .header {
+        height: 18rem;
+      }
+
+      .project {
+        .name a,
+        .project-id {
+          font-size: map-get($headers, h3);
+          line-height: map-get($headers, h3);
+        }
+      }
+    }
+
+    @include breakpoint(laptop, 'min-width') {
+      .header {
+        height: 24rem;
+      }
+
+      .project {
+        .name a,
+        .project-id {
+          font-size: map-get($headers, h2);
+          line-height: map-get($headers, h2);
+        }
+      }
+    }
+  }
+
+  .socials {
+    height: 16rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+
+    .links {
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      & > *:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+
+      a {
+        color: inherit;
+
+        &:hover {
+          color: color(orange, 400);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .graphic {
+      position: absolute;
+      top: 2.5rem;
+      bottom: 0;
+      z-index: -1;
+
+      i {
+        background-size: cover;
+      }
+    }
+
+    @include breakpoint(tablet-large, 'min-width') {
+      & {
+        height: 20rem;
+      }
+
+      .links {
+        padding-top: 2rem;
+      }
+    }
+
+    @include breakpoint(laptop, 'min-width') {
+      & {
+        height: 28rem;
+      }
+
+      .links {
+        padding-top: 3rem;
+      }
+    }
+
+    @include breakpoint(phone-large, 'max-width') {
+      & {
+        height: 10rem;
+      }
+
+      .graphic {
+        top: 2rem;
+      }
+
+      .links {
+        gap: .4rem;
+        flex-direction: row;
+
+        a {
+          font-size: 4em;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(phone-large, 'max-width') {
+    h1 {
+      font-size: map-get($headers, h3);
+    }
+
+    h5 {
+      font-size: map-get($headers, h6);
+    }
+  }
+}
