@@ -208,7 +208,7 @@ body{
 .overlay{position:fixed;inset:0;background:rgba(26,20,16,.85);backdrop-filter:blur(6px);z-index:1000;display:flex;align-items:flex-start;justify-content:center;padding:24px 16px 40px;overflow-y:auto;}
 .modal{width:100%;max-width:960px;background:var(--cream);border:4px solid var(--ink);box-shadow:10px 10px 0 0 var(--ink);border-radius:24px;overflow:hidden;}
 .m-hero{background:var(--primary);color:var(--cream);padding:28px 28px 22px;border-bottom:3px solid var(--ink);position:relative;}
-.m-close{position:absolute;top:16px;right:16px;background:var(--cream);color:var(--ink);border:3px solid var(--ink);width:40px;height:40px;border-radius:9999px;font-family:'Bangers',sans-serif;font-size:1.1rem;cursor:pointer;box-shadow:3px 3px 0 0 var(--ink);}
+.m-close{position:absolute;top:16px;right:16px;background:var(--cream);color:var(--ink);border:3px solid var(--ink);width:40px;height:40px;border-radius:9999px;font-family:'Bangers',sans-serif;font-size:1.1rem;cursor:pointer;box-shadow:3px 3px 0 0 var(--ink);display:flex;align-items:center;justify-content:center;line-height:1;padding:0;}
 .m-tag{display:inline-block;background:var(--gold);color:var(--ink);font-family:'Bangers',sans-serif;letter-spacing:.14em;font-size:.85rem;padding:4px 12px;border:3px solid var(--ink);border-radius:9999px;margin-bottom:10px;}
 .m-title{font-family:'Bangers',sans-serif;font-size:2rem;letter-spacing:.015em;line-height:1;}
 .m-sub{margin-top:8px;font-weight:500;line-height:1.55;font-size:.9375rem;}
@@ -233,13 +233,13 @@ body{
 const TABS = ['🏠 Home','💼 Experience','📊 Projects','🏅 Credentials'];
 
 const HERO = {
-  kicker: '✦ NOW QUESTING · LIBERTY PR',
+  kicker: '✦ OPEN TO QUESTS · SAN JUAN PR',
   pre: 'I TURN ',
   mid: 'PLAYERS',
   bridge: ' INTO ',
   end: 'PATTERNS',
   tail: '.',
-  sub: "Senior Data Analyst with 5+ years in enterprise analytics and firsthand Roblox platform fluency. I build retention models, run A/B experiments, and translate player behavior into product wins. Gaming, aerospace, and telecom.",
+  sub: "Senior Data Analyst. Roblox platform veteran — not just familiar with the ecosystem, built inside it. I architect AI-integrated internal tooling, run cohort retention experiments, and surface behavioral signals that drive product decisions. High ownership. Always on.",
 };
 
 const STATS = [
@@ -263,59 +263,67 @@ const projects = [
     name:'Roblox Pulse',
     tag:'LIVE DEMO · ROBLOX',
     client:'Personal Project',
-    desc:'Live analytics dashboard exploring Roblox platform data. Built start to finish as a working portfolio demo. Click through to interact.',
+    desc:'Live analytics dashboard built on Roblox platform data. Purpose-built to demonstrate real game analytics infrastructure: player trends, engagement signals, and data storytelling. Click to interact.',
     chips:['Live Site','Roblox','Dashboard'],
-    url:'https://project-ba-ten.vercel.app/',
+    url:'https://pulse.shipfox.me',
+    visual:{ type:'iframe', src:'https://pulse.shipfox.me' },
   },
   {
     name:'Liberty Executive BI Dashboards',
     tag:'POWER BI · LIBERTY PR',
     client:'Liberty Puerto Rico',
-    desc:'Designed and maintained dynamic executive dashboards in Power BI to analyze system data and recurring service failures, identifying root causes that drove process improvements and supported continuous operational decisions.',
+    desc:'Designed and maintained executive Power BI dashboards for one of Puerto Rico\'s largest telcos. Surfaced recurring service failures, drove C-suite process decisions, and maintained data integrity under continuous production pressure.',
     chips:['Power BI','SQL','Telecom'],
+    visual:{ type:'emoji', e:'📊', bg:'#1a1410' },
   },
   {
     name:'SAP Material Analysis Pipeline',
     tag:'SAP · UID ANALYSIS',
     client:'Liberty Puerto Rico',
-    desc:'Extracted and analyzed material data from SAP, cross referencing UIDs to conduct price analysis, track material usage, and forecast projections. Beat fiscal and operational targets by 40%.',
+    desc:'Enterprise-scale material data extraction and cross-referencing in SAP. Price analysis, usage tracking, multi-quarter forecasting. Beat fiscal and operational targets by 40%. Backend data rigor at enterprise scale.',
     chips:['SAP','Forecasting','+40% Targets'],
+    visual:{ type:'emoji', e:'📦', bg:'#e9b04d' },
   },
   {
-    name:'AI Accelerated Reporting Workflows',
+    name:'AI-Native Reporting Stack',
     tag:'CLAUDE · COPILOT',
     client:'Liberty Puerto Rico',
-    desc:'Integrated AI tools (Claude, Microsoft Copilot) into daily reporting workflows to automate data interpretation, accelerate root cause analysis, and generate polished executive insights. Report turnaround time dropped significantly.',
+    desc:'Built AI-first reporting infrastructure using Claude and Microsoft Copilot. Automated data interpretation, root cause analysis, and executive narrative generation. AI isn\'t a tool I reach for occasionally — it\'s integrated at every step.',
     chips:['Claude','Copilot','Prompt Eng.'],
+    visual:{ type:'emoji', e:'🤖', bg:'#d81a1d' },
   },
   {
     name:'Power Automate Enterprise Playbooks',
     tag:'AUTOMATION · ORACLE',
     client:'Liberty Puerto Rico',
-    desc:'Built automated playbooks and documented workflows using Power Automate to streamline reporting and cut inefficiencies. Adapted to Oracle systems to ensure live data integrity for business stakeholders.',
+    desc:'Designed automated reporting playbooks and internal SOPs using Power Automate. Adapted to live Oracle systems to maintain data integrity across enterprise stakeholder workflows with zero tolerance for downtime.',
     chips:['Power Automate','Oracle','SOP'],
+    visual:{ type:'emoji', e:'⚡', bg:'#1a1410' },
   },
   {
     name:'Maxar Geospatial QA Pipeline',
     tag:'GIS · AEROSPACE',
     client:'Maxar Technologies',
-    desc:'Conducted broad spatial analysis of satellite data for 1,000+ aerospace and defense structures. Implemented Peer Reviewer QA workflows that cut rework time by 15% across highly regulated military contracts.',
+    desc:'2D/3D spatial analysis of satellite data for 1,000+ aerospace and defense structures. Implemented Peer Reviewer QA workflows that cut rework time by 15%. When the data requirements are military-grade, every row counts.',
     chips:['GIS','2D/3D','-15% Rework'],
+    visual:{ type:'emoji', e:'🛰️', bg:'#e9b04d' },
   },
   {
     name:'Roblox Asset Pipeline Automation',
     tag:'C# · ROBLOX',
     client:'Firebit Dev. (Roblox)',
-    desc:'Partnered with game developers to track asset delivery pipelines and implement C# scripting automation, cutting manual data entry and speeding delivery cycles. Managed broad digital libraries. Team communication improved and production rework dropped by 20%.',
+    desc:'Embedded with Roblox game developers to automate asset delivery pipelines with C# scripting. Cut manual data entry and sped production cycles. Came from the platform itself — I know how Roblox games are built and what data actually matters.',
     chips:['C#','Asset Ops','-20% Rework'],
+    visual:{ type:'emoji', e:'🎮', bg:'#d81a1d' },
   },
   {
     name:'Player Retention Dashboard',
     tag:'ANALYTICS DEMO',
     client:'Anonymized Cohort Data',
-    desc:'Live dashboard tracking D1 through D14 cohort retention over 89 days. Real anonymized analytics data. Open the demo from the home tab to explore the charts.',
+    desc:'Live internal dashboard tracking D1 through D14 cohort retention across 89 days of real anonymized game data. This is the kind of tooling I build. Click to explore the charts.',
     chips:['Recharts','Cohorting','Live Demo'],
     onClick:'modal',
+    visual:{ type:'chart' },
   },
 ];
 
@@ -372,7 +380,6 @@ const education = [
 
 const CONTACT = {
   email: 'eduardo_trabajos007@outlook.com',
-  phone: '(787) 205 7014',
   location: 'San Juan, PR',
 };
 
@@ -549,10 +556,9 @@ export default function Landing() {
 
           <div className='cbox'>
             <div className='ct'>RECRUIT ME</div>
-            <div className='cs'>{CONTACT.location} · Open to full time, contract, and remote data analyst roles.</div>
+            <div className='cs'>Roblox-native. AI-integrated. Built for high-stakes, high-ownership game analytics. Open to full-time and remote roles.</div>
             <div className='cbs'>
               <a className='btn btn-ink' href={`mailto:${CONTACT.email}`}>EMAIL →</a>
-              <a className='btn btn-ink' href={`tel:+1${CONTACT.phone.replace(/\D/g,'')}`}>{CONTACT.phone}</a>
               <a
                 className='btn btn-ink'
                 href={socials.linkedin}
@@ -594,7 +600,37 @@ export default function Landing() {
             const studies = projects.filter(p => !p.url && p.onClick !== 'modal');
             const renderInner = (p, ctaLabel) => (
               <>
-                <div className='pt' style={{display:'flex',alignItems:'center',justifyContent:'center'}}>
+                <div className='pt'>
+                  {p.visual?.type==='iframe' && (
+                    <div style={{position:'absolute',inset:0,overflow:'hidden',pointerEvents:'none'}}>
+                      <iframe
+                        src={p.visual.src}
+                        style={{width:'200%',height:'340px',transform:'scale(0.5)',transformOrigin:'top left',border:'none'}}
+                        loading='lazy'
+                        title={p.name}
+                      />
+                    </div>
+                  )}
+                  {p.visual?.type==='chart' && (
+                    <div style={{position:'absolute',inset:0,padding:'6px 0 0',pointerEvents:'none'}}>
+                      <ResponsiveContainer width='100%' height='100%'>
+                        <AreaChart data={avgCurve} margin={{top:4,right:4,left:-30,bottom:0}}>
+                          <defs>
+                            <linearGradient id='ptg' x1='0' y1='0' x2='0' y2='1'>
+                              <stop offset='5%' stopColor='#d81a1d' stopOpacity={0.5}/>
+                              <stop offset='95%' stopColor='#d81a1d' stopOpacity={0}/>
+                            </linearGradient>
+                          </defs>
+                          <Area type='monotone' dataKey='avg' stroke='#d81a1d' fill='url(#ptg)' strokeWidth={2.5} dot={false}/>
+                        </AreaChart>
+                      </ResponsiveContainer>
+                    </div>
+                  )}
+                  {p.visual?.type==='emoji' && (
+                    <div style={{position:'absolute',inset:0,display:'flex',alignItems:'center',justifyContent:'center',fontSize:'4rem',background:p.visual.bg||'var(--cream-2)'}}>
+                      {p.visual.e}
+                    </div>
+                  )}
                   <div className='ptag'>{p.tag}</div>
                 </div>
                 <div className='pb'>
@@ -688,13 +724,6 @@ export default function Landing() {
               <div>
                 <div className='bd-n'>EMAIL</div>
                 <div className='bd-s'>{CONTACT.email}</div>
-              </div>
-            </a>
-            <a className='bd' href={`tel:+1${CONTACT.phone.replace(/\D/g,'')}`}>
-              <div className='bd-i' style={{background:'#e9b04d',color:'#1a1410'}}>📞</div>
-              <div>
-                <div className='bd-n'>PHONE</div>
-                <div className='bd-s'>{CONTACT.phone}</div>
               </div>
             </a>
             <a
