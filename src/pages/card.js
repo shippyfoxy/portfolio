@@ -37,9 +37,6 @@ const Card = () => {
                     eduardo_trabajos007@outlook.com
                   </a>
                 </h6>
-                <h6 className='font-weight-300'>
-                  <a href='tel:+17872057014'>787-205-7014</a>
-                </h6>
                 <h6 className='font-weight-300'>San Juan, PR</h6>
               </div>
               <div className='links'>
