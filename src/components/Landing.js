@@ -152,10 +152,10 @@ body{
 .wrap{max-width:1180px;margin:0 auto;padding:48px 24px 72px;}
 
 /* SECTION HEADER */
-.sh{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 32px;flex-wrap:wrap;}
+.sh{display:flex;flex-direction:column;gap:8px;margin:0 0 32px;}
 .sh h2{font-family:'Bangers',sans-serif;font-size:clamp(2.2rem,4.5vw,3.4rem);color:var(--cream);letter-spacing:.015em;line-height:1;}
 .sh h2 .accent{color:var(--primary);}
-.sh p{max-width:380px;font-weight:500;color:#b8aea0;font-size:.9375rem;line-height:1.5;}
+.sh p{font-family:'Inter',system-ui,sans-serif;font-weight:500;color:#b8aea0;font-size:.9375rem;line-height:1.5;max-width:520px;}
 
 /* SKILLS GRID */
 .sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px;}
@@ -312,7 +312,7 @@ const projects = [
     name:'Roblox Asset Pipeline Automation',
     tag:'C# · ROBLOX',
     client:'Firebit Dev. (Roblox)',
-    desc:'Embedded with Roblox game developers to automate asset delivery pipelines with C# scripting. Cut manual data entry and sped production cycles. Came from the platform itself — I know how Roblox games are built and what data actually matters.',
+    desc:'Utilized C# and automation scripts to optimize asset pipelines for a Roblox development studio, reducing manual data entry and speeding up delivery cycles. Managed large-scale digital asset libraries across multi-disciplinary teams. Cross-team coordination improvements cut production rework by 20%.',
     chips:['C#','Asset Ops','-20% Rework'],
     visual:{ type:'emoji', e:'🎮', bg:'#d81a1d' },
   },
@@ -359,10 +359,9 @@ const experience = [
     date:'DEC 2020 TO FEB 2023',
     location:'Remote',
     bullets:[
-      'Worked directly within Roblox’s internal product and developer teams as a long time platform veteran. Operational analyst and engaged player perspective.',
-      'Partnered with game developers to track asset delivery pipelines and implement C# scripting automation.',
-      'Leveraged firsthand understanding of Roblox game loops, engagement patterns, and retention mechanics to support data driven content decisions.',
-      'Managed broad digital libraries. Production rework dropped 20% through improved team coordination.',
+      ‘Utilized C# and automation scripts to optimize asset pipelines for a Roblox development studio, reducing manual data entry tasks and speeding up delivery cycles.’,
+      ‘Managed large-scale digital asset libraries for multi-disciplinary development teams, ensuring accurate metadata tagging and efficient retrieval systems.’,
+      ‘Coordinated asset delivery across multiple formats, improving cross-team communication and reducing production rework by 20%.’,
     ],
   },
 ];
