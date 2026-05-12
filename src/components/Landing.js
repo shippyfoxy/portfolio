@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import {
   LineChart, Line, AreaChart, Area, BarChart, Bar,
   XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer
@@ -359,9 +359,9 @@ const experience = [
     date:'DEC 2020 TO FEB 2023',
     location:'Remote',
     bullets:[
-      ‘Utilized C# and automation scripts to optimize asset pipelines for a Roblox development studio, reducing manual data entry tasks and speeding up delivery cycles.’,
-      ‘Managed large-scale digital asset libraries for multi-disciplinary development teams, ensuring accurate metadata tagging and efficient retrieval systems.’,
-      ‘Coordinated asset delivery across multiple formats, improving cross-team communication and reducing production rework by 20%.’,
+      'Utilized C# and automation scripts to optimize asset pipelines for a Roblox development studio, reducing manual data entry tasks and speeding up delivery cycles.',
+      'Managed large-scale digital asset libraries for multi-disciplinary development teams, ensuring accurate metadata tagging and efficient retrieval systems.',
+      'Coordinated asset delivery across multiple formats, improving cross-team communication and reducing production rework by 20%.',
     ],
   },
 ];
